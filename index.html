@@ -4,26 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works Studio Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="./src/output.css">
 </head>
 
 <body>
     <!-- Video loading  -->
-    <div class="loader">
-        <h1 class="headline absolute font-freight text-5xl text-center z-30 pt-[17%] pl-[7.5%]"><span class="font-freight-italic">We are a</span> STRATEGY-<span class="font-freight-italic">led</span> CREATIVE STUDIO<br>ADVANCING CULTURE <span class="font-freight-italic">by</span> ANY MEDIUM NECESSARY.</h1>
-        <div class="yellow1 w-full h-screen bg-[#F5E31A] z-0"></div>
-        <video autoplay loop muted src="./assets/loader-video.mp4" class="bg-video z-10 object-cover">
-        </video>
-        <div class="yellow2 w-full h-screen z-20 bg-[#F5E31A]"></div>
+    <div class="loader fixed h-screen w-full bg-blue-900 flex justify-center items-center text-center">
+        <h1 class="headline relative font-freight text-5xl z-40">
+            <span class="font-freight-italic">We are a</span> STRATEGY-<span class="font-freight-italic">led</span> CREATIVE STUDIO<br>ADVANCING CULTURE <span class="font-freight-italic">by</span> ANY MEDIUM NECESSARY.
+        </h1>
+
+        <div class="yellow1 absolute h-full w-full z-30 bg-[#F5E31A]"></div>
+
+        <video autoplay muted loop src="./assets/loader-video.mp4" class="bg-video absolute h-full w-full object-cover z-10"></video>
+
+        <div class="yellow2 absolute h-full w-full z-20 bg-[#F5E31A]"></div>
     </div>
 
+    <!-- Navbar  -->
+    <div class="nav absolute w-full z-50 px-3 py-3 bg-red-500">
+        <img src="./assets/logo-black.png" alt="logo" class="h-6 w-auto" >
+    </div>
+    
     <!-- Main div  -->
     <div class="main">
-        <div class="w-full h-screen">
-            <!-- <h1>We are a STRATEGY-led CREATIVE STUDIO<br>ADVANCING CULTURE by ANY MEDIUM NECESSARY.</h1> -->
+        <div data-scroll data-scroll-speed='2' class="page1 absolute bg-[#F5E31A] h-screen w-full flex justify-center items-center text-center text-black">
+            <h1 class="headline relative font-freight text-5xl z-40">
+            <span class="font-freight-italic">We are a</span> STRATEGY-<span class="font-freight-italic">led</span> CREATIVE STUDIO<br>ADVANCING CULTURE <span class="font-freight-italic">by</span> ANY MEDIUM NECESSARY.
+            </h1>
         </div>
+        <div data-scroll data-scroll-speed='2' class="page2 absolute bg-blue-400 h-screen w-full"></div>
+        <div data-scroll data-scroll-speed='2' class="page3 absolute bg-blue-700 h-screen w-full" ></div>
     </div>
 
+    <!-- Locomotive CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <!-- GSAP CDN  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>

@@ -1,28 +1,32 @@
+// <!-- Locomotive CDN  -->
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('.main'),
+    smooth: true
+});
+
+// Loading animation
 var tl = gsap.timeline()
 
 tl.to(".yellow1", {
-    y: -600,
+    top: "-100%",
     duration: 0.5,
-    delay: 0.6,
+    delay: 0.4,
     ease: "expo.in",
 })
 .to(".headline", {
   color: "black"
 }, "<");
 
-
 tl.to(".bg-video", {
-    y: -600,
     duration: 0.5,
-    ease: "expo.in",
+    delay: -0.2,
 })
 .to(".headline", {
   color: "white"
 }, "<");
 
-
-tl.to(".yellow2", {
-    y: -1278,
+tl.from(".yellow2", {
+    top: "100%",
     duration: 0.5,
     delay: 0.8,
     ease: "expo.out",
@@ -31,4 +35,9 @@ tl.to(".yellow2", {
   color: "black"
 }, "<");
 
-
+tl.to(".loader",{
+    display: "none",
+})
+tl.to(".loader",{
+    opacity: 0,
+})
