@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /node_modules
 .env
 /.vscode
 dump.html
+=======
+node_modules/
+dist/
+.cache/
+.env
+dump.html
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8

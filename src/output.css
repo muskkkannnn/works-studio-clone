@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+<<<<<<< HEAD
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-green-200: oklch(92.5% 0.084 155.995);
@@ -20,6 +21,15 @@
     --spacing: 0.25rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+=======
+    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
+    --spacing: 0.25rem;
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-bold: 700;
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -182,6 +192,12 @@
   .relative {
     position: relative;
   }
+<<<<<<< HEAD
+=======
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   .z-0 {
     z-index: 0;
   }
@@ -206,18 +222,24 @@
   .table {
     display: table;
   }
+<<<<<<< HEAD
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+=======
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   .h-full {
     height: 100%;
   }
   .h-screen {
     height: 100vh;
   }
+<<<<<<< HEAD
   .w-auto {
     width: auto;
   }
+=======
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   .w-full {
     width: 100%;
   }
@@ -237,12 +259,23 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+<<<<<<< HEAD
+=======
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+  .border-red-700 {
+    border-color: var(--color-red-700);
+  }
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   .bg-\[\#F5E31A\] {
     background-color: #F5E31A;
   }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
   }
+<<<<<<< HEAD
   .bg-blue-300 {
     background-color: var(--color-blue-300);
   }
@@ -254,19 +287,50 @@
   }
   .bg-white {
     background-color: var(--color-white);
+=======
+  .bg-blue-900 {
+    background-color: var(--color-blue-900);
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   }
   .object-cover {
     object-fit: cover;
   }
+<<<<<<< HEAD
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+=======
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .pt-\[10\%\] {
+    padding-top: 10%;
+  }
+  .pt-\[17\%\] {
+    padding-top: 17%;
+  }
+  .pl-\[7\.5\%\] {
+    padding-left: 7.5%;
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   }
   .text-center {
     text-align: center;
   }
+<<<<<<< HEAD
   .text-\[3\.8vw\] {
     font-size: 3.8vw;
   }
@@ -282,6 +346,15 @@
   }
   .text-blue-500 {
     color: var(--color-blue-500);
+=======
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   }
   .underline {
     text-decoration-line: underline;
@@ -301,12 +374,21 @@
 }
 * {
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  font-family: 'FreightBigProLight-Regular', serif;
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
 }
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+=======
+  overflow: hidden;
+  background-color: black;
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
 }
 .font-freight {
   font-family: 'FreightBigProLight-Regular', serif;
@@ -323,7 +405,11 @@ html, body {
   inherits: false;
   initial-value: solid;
 }
+<<<<<<< HEAD
 @property --tw-leading {
+=======
+@property --tw-font-weight {
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
   syntax: "*";
   inherits: false;
 }
@@ -336,7 +422,11 @@ html, body {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+<<<<<<< HEAD
       --tw-leading: initial;
+=======
+      --tw-font-weight: initial;
+>>>>>>> e24189654ef97c924d972d8eb14909054b9814b8
       --tw-outline-style: solid;
     }
   }
