@@ -1,5 +1,15 @@
+// <!-- Locomotive CDN  -->
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('.main'),
+    smooth: true
+});
+
 function loader() {
     var tl = gsap.timeline()
+
+    tl.to(".project-cards", {
+        display: "none",
+    })
 
     tl.to(".yellow1", {
         top: "-100%",
@@ -40,12 +50,27 @@ function loader() {
         display: "none",
     })
 
+    tl.to(".project-cards", {
+        display: "flex",
+    })
+
     tl.to(".headline", {
         top: "-20%",
         duration: 0.6,
         delay: 0.09,
         ease: "ease.inOut(4)",
     })
+    tl.from(".nav", {
+        duration: 0.6,
+        opacity: 0,
+        y: 50, 
+    }, "<")
+    tl.from(".project-cards", {
+        y: "20%",
+        duration: 0.6,
+        opacity: 0,
+        ease: "ease.inOut(4)"
+    }, "<")
 }
 
 loader();
