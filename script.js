@@ -51,7 +51,7 @@ function loader() {
     })
 
     tl.to(".project-cards", {
-        display: "flex",
+        display: "grid",
     })
 
     tl.to(".headline", {
