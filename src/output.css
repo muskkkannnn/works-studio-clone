@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-violet-300: oklch(81.1% 0.111 293.571);
     --color-pink-300: oklch(82.3% 0.12 346.018);
@@ -238,6 +239,9 @@
   .bg-\[\#F5E31A\] {
     background-color: #F5E31A;
   }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
   .bg-blue-300 {
     background-color: var(--color-blue-300);
   }
@@ -268,6 +272,9 @@
   .leading-\[2\.8vw\] {
     --tw-leading: 2.8vw;
     line-height: 2.8vw;
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-black {
     color: var(--color-black);
@@ -324,6 +331,18 @@ html, body {
 .project-3 {
   grid-column: 3 / span 2;
   grid-row: span 6;
+}
+.elem h2 {
+  font-size: 6vw;
+  color: white;
+  font-family: '.font-freight';
+}
+.elem .moving-bar .moving-text {
+  display: inline-block;
+}
+.elem .moving-bar .moving-text h5 {
+  display: inline-block;
+  color: white;
 }
 @property --tw-leading {
   syntax: "*";
