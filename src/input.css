@@ -63,3 +63,16 @@ html, body {
   grid-column: 3 / span 2;
   grid-row: span 6;
 }
+
+.elem h2 {
+  font-size: 6vw;
+  color: white;
+  font-family: '.font-freight';
+}
+.elem .moving-bar .moving-text {
+  display: inline-block;
+}
+.elem .moving-bar .moving-text h5 {
+  display: inline-block;
+  color: white;
+}
