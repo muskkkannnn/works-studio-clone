@@ -11,7 +11,7 @@
 
 * {
     box-sizing: border-box;
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 html, body {
@@ -74,5 +74,6 @@ html, body {
 }
 .elem .moving-bar .moving-text h5 {
   display: inline-block;
-  color: white;
+  color: black;
+  margin: 5px;
 }
