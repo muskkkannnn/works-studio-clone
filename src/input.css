@@ -80,6 +80,13 @@ html, body {
   background-color: #F5E31A;
    /* white-space: nowrap; */
 }
+.elem .moving-bar {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  /* white-space: nowrap; */
+  background-color: #F5E31A;
+}
 .elem .moving-bar .moving-text {
   display: inline-block;
   animation: moving-text-bar 5s linear infinite;

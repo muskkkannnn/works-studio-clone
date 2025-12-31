@@ -377,6 +377,10 @@ html, body {
   transform: translate(0, -50%);
   background-color: #F5E31A;
 }
+.elem .moving-bar {
+  background-color: #F5E31A;
+  position: absolute;
+}
 .elem .moving-bar .moving-text {
   display: inline-block;
   animation: moving-text-bar 5s linear infinite;
