@@ -64,10 +64,21 @@ html, body {
   grid-row: span 6;
 }
 
+/* Featured Section */
 .elem h2 {
+  position: relative;
   font-size: 6vw;
   color: white;
   font-family: '.font-freight';
+  z-index: 99;
+}
+.elem .moving-bar {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #F5E31A;
+   /* white-space: nowrap; */
 }
 .elem .moving-bar {
   position: absolute;
@@ -78,9 +89,19 @@ html, body {
 }
 .elem .moving-bar .moving-text {
   display: inline-block;
+  animation: moving-text-bar 5s linear infinite;
 }
 .elem .moving-bar .moving-text h5 {
   display: inline-block;
   color: black;
   margin: 5px;
+}
+/* .moving-bar animate */
+@keyframes moving-text-bar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
