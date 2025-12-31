@@ -3,5 +3,8 @@
 
 <br><h3>Tech Stack:<br></h3>
 <pre>
--> Layout                    |     -> Interactivity           |     -> Animation           |     -> Smooth Scrolling <br>
-HTML, Tailwind CSS           |     JavaScript                 |     GSAP                   |     Locomotive.js <br></pre>
+<strong>-> Layout</strong>                    |     <strong>-> Interactivity</strong> <br>  
+HTML, Tailwind CSS           |     JavaScript <br>
+
+<strong>-> Animation</strong>                 |     <strong>-> Smooth Scrolling</strong> <br>
+GSAP                         |     Locomotive.js <br></pre>
