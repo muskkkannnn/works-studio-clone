@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-violet-300: oklch(81.1% 0.111 293.571);
@@ -206,6 +207,9 @@
   .grid {
     display: grid;
   }
+  .table {
+    display: table;
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -224,8 +228,20 @@
   .w-full {
     width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
+  }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -235,6 +251,10 @@
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-\[\#F5E31A\] {
     background-color: #F5E31A;
@@ -247,6 +267,9 @@
   }
   .bg-pink-300 {
     background-color: var(--color-pink-300);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
   .bg-violet-300 {
     background-color: var(--color-violet-300);
@@ -279,6 +302,13 @@
   .text-black {
     color: var(--color-black);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
 }
 @font-face {
   font-family: 'FreightBigProLight-Regular';
@@ -290,6 +320,7 @@
 }
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 html, body {
   margin: 0;
@@ -333,25 +364,81 @@ html, body {
   grid-row: span 6;
 }
 .elem h2 {
+  position: relative;
   font-size: 6vw;
   color: white;
   font-family: '.font-freight';
+  z-index: 99;
+}
+.elem .moving-bar {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #F5E31A;
 }
 .elem .moving-bar .moving-text {
   display: inline-block;
+  animation: moving-text-bar 5s linear infinite;
 }
 .elem .moving-bar .moving-text h5 {
   display: inline-block;
-  color: white;
+  color: black;
+  margin: 5px;
+}
+@keyframes moving-text-bar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-leading {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-leading: initial;
+      --tw-outline-style: solid;
     }
   }
 }
